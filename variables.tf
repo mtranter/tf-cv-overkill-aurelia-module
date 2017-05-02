@@ -1,5 +1,7 @@
 variable "region" {}
 
+variable "module_name" {}
+
 variable "relative_source_path" {}
 
 variable "website_files" {
