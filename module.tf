@@ -20,7 +20,3 @@ resource "aws_s3_bucket_object" "object" {
   etag    = "${md5(file("${path.module}${var.relative_source_path}${var.website_files[count.index]}"))}"
   content_type = "${lookup(var.content_type_map, element(split(".", var.website_files[count.index]), length(split(".", var.website_files[count.index])) - 1))}"
 }
-
-module "home" {
-  source = ""
-}
